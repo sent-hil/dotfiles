@@ -37,7 +37,7 @@ end
 
 set -xU HOMEBREW_GITHUB_API_TOKEN 072305f77483902e6c7d3c85b2c635d1f66dac3f
 
-# .envrc file 
+# .envrc file
 eval (direnv hook fish)
 
 # go package manager
@@ -58,3 +58,4 @@ function rc
 end
 
 set -xU EDITOR /usr/local/bin/vim
+set -U fish_user_paths $fish_user_paths /Users/senthil/.gobin
