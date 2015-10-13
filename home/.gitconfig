@@ -1,0 +1,47 @@
+[user]
+	name = Senthil
+	email = senthil@koding.com
+[diff]
+[color]
+  ui = auto
+[format]
+  pretty=format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+[alias]
+  a  = add .
+  b  = branch
+  c  = commit -m
+  d  = diff --cached
+  i  = init
+  l  = log --stat --color
+  r  = reset
+  s  = status
+  cm = commit --amend
+  ch = checkout
+  dh = diff HEAD
+  fa = fetch --all
+[merge]
+	tool = diffmerge
+[github]
+	user = sent-hil
+[push]
+	default = matching
+[core]
+	editor = /usr/bin/vim
+	pager = less -FRSX
+	excludesfile = /Users/senthil/.gitignore
+[web]
+	browser = chrome
+[init]
+	templatedir = ~/.git_template
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

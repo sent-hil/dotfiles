@@ -1,0 +1,11 @@
+.local/share/autojump/*
+.zsh-update
+.bash_history
+tags
+.config/*
+.local/*
+.DS_Store
+.config/fish/fishd.*
+.vim/.netrwhist
+vendor/*
+.bundle
