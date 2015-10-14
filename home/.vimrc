@@ -7,7 +7,7 @@ if 0 | endif
 
 if has('vim_starting')
   if &compatible
-    set nocompatible               " Be iMproved
+    set nocompatible
   endif
 
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -135,6 +135,9 @@ try
   set undofile
 catch
 endtry
+
+" recursively go up till you find tags (ctags) files
+set tags=./tags;/
 
 " ================ Theme ====================
 syntax on

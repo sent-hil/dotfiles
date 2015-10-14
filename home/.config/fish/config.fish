@@ -58,4 +58,6 @@ function rc
 end
 
 set -xU EDITOR /usr/local/bin/vim
-set -U fish_user_paths $fish_user_paths /Users/senthil/.gobin
+set -U fish_user_paths $fish_user_paths /Users/senthil/.rvm/gems/ruby-2.2.1/bin /Users/senthil/.gobin /Users/senthil/o-ri
+
+alias ls='ls --color=auto'
