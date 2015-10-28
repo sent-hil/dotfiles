@@ -312,14 +312,14 @@ endif
 inoremap <C-u> <ESC>:m .+1<CR>==gi
 inoremap <C-i> <ESC>:m .-2<CR>==gi
 
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
                      \ 'passive_filetypes': ['html'] }
 
 let g:go_bin_path = "/Users/senthil/.gobin"
 let g:go_fmt_command = "goimports"
-
-let g:syntastic_aggregate_errors = 1
+au FileType go nmap <C-]> <Plug>(go-def)
 
 let g:lightline = {
       \ 'component': {
@@ -357,8 +357,24 @@ autocmd FileType go nnoremap <leader>s :call OpenGoTestAlternate()<cr>
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
+    set relativenumber!
   else
     set relativenumber
   endif
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
+
+let g:SuperTabDefaultCompletionType = "context"
+let g:stop_autocomplete=0
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
