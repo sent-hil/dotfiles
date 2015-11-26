@@ -378,3 +378,6 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+let g:EasyMotion_leader_key = '<Leader>'
+let g:syntastic_go_checkers = ['go', 'golint']
