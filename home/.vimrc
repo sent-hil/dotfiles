@@ -47,6 +47,7 @@ NeoBundle "sent-hil/vim-snippets"
 NeoBundle "Raimondi/delimitMate"
 NeoBundle "skwp/greplace.vim"
 NeoBundle "itchyny/lightline.vim"
+NeoBundle "christoomey/vim-tmux-navigator"
 
 call neobundle#end()
 

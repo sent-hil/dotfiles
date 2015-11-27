@@ -35,15 +35,15 @@ function fish_prompt --description 'Write out the prompt'
   end
 end
 
-set -xU HOMEBREW_GITHUB_API_TOKEN 072305f77483902e6c7d3c85b2c635d1f66dac3f
+set -xU HOMEBREW_GITHUB_API_TOKEN 4934df65b4fcc095b3d1473ef5154d538c9a087b
 set -xU EDITOR /usr/local/bin/vim
 set -U fish_user_paths /Users/senthil/.rvm/gems/ruby-2.2.1/bin $fish_user_paths /Users/senthil/.gobin /Users/senthil/o-ri /Users/senthil/work/klient-go/bin
 
-alias ls='ls --color=auto'
+alias ls="ls --color=auto"
 alias git="kd run git"
 
 ## .envrc file
-#eval (direnv hook fish)
+eval (direnv hook fish)
 
 # go package manager
 function gvm

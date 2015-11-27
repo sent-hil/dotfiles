@@ -21,3 +21,4 @@ vim-go
 vim-ruby
 vim-snipmate
 vim-snippets
+vim-tmux-navigator
