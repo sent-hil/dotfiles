@@ -57,3 +57,10 @@ gvm use go1.4.3
 ## nvm package manager
 #test -s /Users/senthil/.nvm-fish/nvm.fish; and source /Users/senthil/.nvm-fish/nvm.fish
 # nvm use v0.10.10
+
+set -x TERM xterm-256color
+
+function clear
+  command "clear"
+  printf '\e[3J'
+end
