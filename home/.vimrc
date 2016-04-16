@@ -48,6 +48,8 @@ NeoBundle "Raimondi/delimitMate"
 NeoBundle "skwp/greplace.vim"
 NeoBundle "itchyny/lightline.vim"
 NeoBundle "christoomey/vim-tmux-navigator"
+NeoBundle "joshhartigan/vim-reddit"
+NeoBundle "ryanss/vim-hackernews"
 
 call neobundle#end()
 
@@ -158,10 +160,10 @@ nnoremap <CR> :nohlsearch<CR>/<BS>
 let mapleader=","
 
 " Use cntrl+jkhl to move between split buffers.
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map <C-h> <C-w>h
+map <M-j> <C-w>j
+map <M-k> <C-w>k
+map <M-l> <C-w>l
+map <M-h> <C-w>h
 
 "switches between recently open files
 nnoremap ;; <c-^>
@@ -374,11 +376,27 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
 let g:EasyMotion_leader_key = '<Leader>'
-let g:syntastic_go_checkers = ['go', 'golint']
+"let g:syntastic_go_checkers = ['go', 'golint']
+
+augroup markdown
+  autocmd!
+
+ " Set the auto-wrap at 80 characters for markdown.
+  autocmd BufNewFile,BufRead *.md setlocal textwidth=80
+
+ " Black magic from
+ " http://vim.wikia.com/wiki/Automatic_formatting_of_paragraphs
+ autocmd BufNewFile,BufRead *.md setlocal fo=aw2tq
+augroup END
+
+nnoremap Q gqip
+set textwidth=80
+
+cmap w!! w !sudo tee > /dev/null %
