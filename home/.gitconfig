@@ -27,8 +27,10 @@
 	default = matching
 [core]
 	editor = /usr/bin/vim
-	pager = less -FRSX
+	pager = diff-so-fancy | less --tabs=1,5 -R
 	excludesfile = /Users/senthil/.gitignore
+	trustctime = false
+  preloadindex = true
 [web]
 	browser = chrome
 [init]

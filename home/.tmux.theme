@@ -54,4 +54,6 @@ tm_date="#[fg=$tm_color_inactive] %d %b, %R"
 tm_session_name="#[fg=$tm_color_feature,bold]$tm_icon #S"
 
 set -g status-left $tm_session_name' '
-set -g status-right $tm_spotify' -'$tm_date' - ''#(pomodoro status)'
+set -g status-right $tm_spotify' '$tm_date' ''#(cat ~/.thyme-tmux)'
+
+set-option -g status-interval 1

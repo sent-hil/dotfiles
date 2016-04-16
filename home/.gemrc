@@ -5,7 +5,7 @@
 - http://gemcutter.org
 - http://gems.rubyforge.org/
 - http://gems.github.com
-gem: --no-rdoc -no-ri
+gem: --no-rdoc -no-ri -n/usr/local/bin
 :bulk_threshold: 1000
 :backtrace: false
 :benchmark: false

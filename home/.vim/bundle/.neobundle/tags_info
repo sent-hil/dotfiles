@@ -18,6 +18,8 @@ vim-addon-mw-utils
 vim-coffee-script
 vim-fugitive
 vim-go
+vim-hackernews
+vim-reddit
 vim-ruby
 vim-snipmate
 vim-snippets
