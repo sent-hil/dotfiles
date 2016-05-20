@@ -338,7 +338,7 @@ au BufRead,BufNewFile *.go.old set filetype=go
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go set textwidth=1000
 autocmd FileType go nnoremap <leader>ac :Ack --go "<C-R><C-W>"
-autocmd FileType go map .. :w \|! clear && go run %<CR>
+"autocmd FileType go map .. :w \|! clear && go run %<CR>
 au BufRead,BufNewFile *_test.go map .. :w \|! clear && go test<CR>
 
 " ================ Functions ====================
@@ -417,3 +417,5 @@ function! RenameFile()
     endif
 endfunction
 map <leader>r :call RenameFile()<cr>
+
+nnoremap <leader>ac :Ack "<C-R><C-W>"

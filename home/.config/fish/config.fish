@@ -37,12 +37,14 @@ end
 
 set -xU HOMEBREW_GITHUB_API_TOKEN 4934df65b4fcc095b3d1473ef5154d538c9a087b
 set -xU EDITOR /usr/local/bin/vim
-set -U fish_user_paths /Users/senthil/.rvm/gems/ruby-2.2.1/bin $fish_user_paths /Users/senthil/.gobin /Users/senthil/o-ri /Users/senthil/work/klient-go/bin
+# set -U fish_user_paths /Users/senthil/.rvm/gems/ruby-2.2.1/bin $fish_user_paths /Users/senthil/.gobin /Users/senthil/o-ri /Users/senthil/work/klient-go/bin
+
+set -x TERM xterm-256color
 
 alias ls="ls --color=auto"
-alias git="kd run git"
+#alias git="kd run git"
 
-## .envrc file
+# .envrc file
 eval (direnv hook fish)
 
 # go package manager
